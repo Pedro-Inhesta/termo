@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@700&display=swap');
+
+body {
+    font-family: 'Fredoka', sans-serif;
+    text-align: center;
+    background-color: #36a438;
+    color: white
+}
+
+hr {
+    width: 600px;
+}
+
+#title {
+    font-size: 36px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: white;
+}
+
+#board {
+    width: 350px;
+    height: 400px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.tile {
+    width: 60px;
+    height: 60px;
+    margin: 2.5px;
+    border-radius: 5px;
+    background-color: #988a42;
+    align-items: center;
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    perspective: 1000px;
+    transition: transform 0.5s;
+}
+
+.tile.flip {
+    transform: rotateY(180deg);
+}
+
+.keyboard-row {
+    width: 400px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    color: white;
+}
+
+.key-tile {
+    width: 36px;
+    height: 40px;
+    margin: 1px;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #4c4347;
+    font-size: 20px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 100ms linear;
+}
+
+.key-tile:hover {
+    transform: scale(1.1);
+}
+
+.enter-key-tile {
+    width: 74px;
+    height: 40px;
+    margin: 1px;
+    background-color: #6b2e08;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 100ms linear;
+}
+
+.enter-key-tile:hover {
+    transform: scale(1.1);
+}
+
+.correct {
+    background-color: #00ff1a;
+    color: white;
+}
+
+.present {
+    background-color: #69c1d3;
+    color: white;
+}
+
+.absent {
+    background-color: #312a2c;
+    color: white;
+}
+
+@media (max-width: 600px) {
+    body {
+        font-family: 'Fredoka', sans-serif;
+        text-align: center;
+        background-color: #6e5c62;
+        color: white;
+        position: fixed;
+        width: 100vw;
+        height: 100vw;
+        max-width: 100%;
+    }
+}
